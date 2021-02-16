@@ -4,7 +4,7 @@
     <string name="return.btn">RETURN</string>
     <string name="email.btn">Email</string>
     <string name="password.btn">Password</string>
-    <string name="forgetPassword.btn">Forget Password?</string>
+    <string name="forget_password_btn">Forget Password?</string>
     <string name="signIn.btn">Sign In</string>
     <string name="signUp.btn">Sign Up</string>
     
