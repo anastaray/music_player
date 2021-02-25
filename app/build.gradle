@@ -1,19 +1,29 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    signingConfigs {
+        debug {
+            storeFile file('D:\\workspace\\MP\\deb_key.jks')
+            storePassword 'qwer1234'
+            keyAlias 'key'
+            keyPassword 'qwer1234'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.anazta217.musicplayer"
-        minSdkVersion 28
-        targetSdkVersion 30
+        minSdkVersion 23
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {
@@ -36,4 +46,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.firebase:firebase-bom:26.5.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
 }

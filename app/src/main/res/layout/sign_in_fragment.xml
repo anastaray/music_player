@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="296dp"
+        android:text="@string/signIn_btn"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAuthoriz"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <!--<EditText
+        android:id="@+id/emailAuthoriz"
+        android:layout_width="214dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="@string/email_btn"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <EditText
+        android:id="@+id/PasswordAuthoriz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/password_btn"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAuthoriz"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signIn_btn"
+        android:textColor="@color/black"
+        android:onClick="ClickSignIn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordAuthoriz"
+        app:layout_constraintVertical_bias="0.114"
+        app:strokeColor="@color/white" />
+
+    <Button
+        android:layout_width="132dp"
+        android:layout_height="31dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/forget_password_btn"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:onClick="ClickIfForgetPassword"
+        app:layout_constraintBottom_toTopOf="@+id/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordAuthoriz"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="@color/white" />
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="82dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/signUp_btn"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:onClick="ClickSignUp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintVertical_bias="0.0" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

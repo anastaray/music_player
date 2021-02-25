@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">Music Player</string>
 
-    <string name="return.btn">RETURN</string>
-    <string name="email.btn">Email</string>
-    <string name="password.btn">Password</string>
+    <string name="return_btn">RETURN</string>
+    <string name="email_btn">Email</string>
+    <string name="password_btn">Password</string>
     <string name="forget_password_btn">Forget Password?</string>
-    <string name="signIn.btn">Sign In</string>
-    <string name="signUp.btn">Sign Up</string>
-    
+    <string name="signIn_btn">Sign In</string>
+    <string name="signUp_btn">Sign Up</string>
+    <!-- Strings related to login -->
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
 </resources>
