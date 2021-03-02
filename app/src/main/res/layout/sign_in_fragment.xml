@@ -17,11 +17,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAuthoriz"
-        app:layout_constraintVertical_bias="0.481" />
+        app:layout_constraintTop_toBottomOf="@+id/emailInput"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <!--<EditText
-        android:id="@+id/emailAuthoriz"
+    <EditText
+        android:id="@+id/emailInput"
         android:layout_width="214dp"
         android:layout_height="47dp"
         android:ems="10"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <EditText
-        android:id="@+id/PasswordAuthoriz"
+        android:id="@+id/passwordInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -46,20 +46,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAuthoriz"
+        app:layout_constraintTop_toBottomOf="@+id/emailInput"
         app:layout_constraintVertical_bias="0.057" />
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/sign_in_firebase_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/signIn_btn"
         android:textColor="@color/black"
-        android:onClick="ClickSignIn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordAuthoriz"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput"
         app:layout_constraintVertical_bias="0.114"
         app:strokeColor="@color/white" />
 
@@ -71,28 +70,27 @@
         android:textColor="@color/black"
         android:textSize="8sp"
         android:onClick="ClickIfForgetPassword"
-        app:layout_constraintBottom_toTopOf="@+id/register"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_firebase_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordAuthoriz"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput"
         app:layout_constraintVertical_bias="0.0"
         app:strokeColor="@color/white" />
 
     <Button
-        android:id="@+id/signUp"
+        android:id="@+id/sign_up_button"
         android:layout_width="82dp"
         android:layout_height="30dp"
         android:layout_marginTop="11dp"
         android:text="@string/signUp_btn"
         android:textColor="@color/black"
         android:textSize="8sp"
-        android:onClick="ClickSignUp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register"
-        app:layout_constraintVertical_bias="0.0" />-->
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_firebase_button"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

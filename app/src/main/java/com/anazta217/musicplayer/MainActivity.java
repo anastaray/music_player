@@ -7,21 +7,25 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FirebaseUser currentUser =  FirebaseAuth.getInstance().getCurrentUser();
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
-        if (account == null) {
+        if (account == null || currentUser == null) {
             openSignInFragment();
         } else {
-            openFirstFragment(account);
+            playlistsFragment(account.getEmail());
         }
     }
 
@@ -39,4 +43,13 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.mainContainer, playlistsFragment);
         fragmentTransaction.commit();
     }
+
+    public void openCreateUserFragment(){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        CreateUserFragment createUserFragment = new CreateUserFragment();
+        fragmentTransaction.replace(R.id.mainContainer, createUserFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
 }

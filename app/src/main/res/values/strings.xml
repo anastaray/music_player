@@ -4,12 +4,21 @@
     <string name="return_btn">RETURN</string>
     <string name="email_btn">Email</string>
     <string name="password_btn">Password</string>
+    <string name="password_repeat_btn">Repeat password</string>
     <string name="forget_password_btn">Forget Password?</string>
     <string name="signIn_btn">Sign In</string>
     <string name="signUp_btn">Sign Up</string>
-    <!-- Strings related to login -->
+
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="password_not_equal_message">Passwords are not equal</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_text">hello text</string>
+    <string name="enter_new_playlist_name">Name of the new playlist</string>
+    <string name="add_song_button">Add the song</string>
+    <string name="delete_playlist_button">Delete playlist</string>
 
 </resources>
