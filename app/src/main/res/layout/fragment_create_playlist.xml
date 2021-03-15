@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreatePlaylistFragment">
+    tools:context=".ui.main.view.CreatePlaylistFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/add_playlist_image"
             android:layout_width="180dp"
             android:layout_height="171dp"
             android:src="@android:drawable/ic_menu_gallery"
@@ -24,7 +24,7 @@
             app:layout_constraintVertical_bias="0.144" />
 
         <EditText
-            android:id="@+id/enter_new_playlist_name"
+            android:id="@+id/input_playlist_name"
             android:layout_width="283dp"
             android:layout_height="48dp"
             android:layout_marginTop="24dp"
@@ -33,7 +33,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/add_playlist_image" />
 
         <Button
             android:id="@+id/add_song_btn"
@@ -43,8 +43,8 @@
             android:text="Add song"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/enter_new_playlist_name"
-            app:layout_constraintTop_toBottomOf="@+id/enter_new_playlist_name" />
+            app:layout_constraintStart_toStartOf="@+id/input_playlist_name"
+            app:layout_constraintTop_toBottomOf="@+id/input_playlist_name" />
 
         <Button
             android:id="@+id/delete_playlist_btn"
@@ -52,19 +52,31 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Delete playlist"
-            app:layout_constraintEnd_toEndOf="@+id/enter_new_playlist_name"
+            app:layout_constraintEnd_toEndOf="@+id/input_playlist_name"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/add_song_btn"
-            app:layout_constraintTop_toBottomOf="@+id/enter_new_playlist_name" />
+            app:layout_constraintTop_toBottomOf="@+id/input_playlist_name" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/songs_list_view"
             android:layout_width="287dp"
             android:layout_height="291dp"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/enter_new_playlist_name"
+            app:layout_constraintTop_toBottomOf="@+id/input_playlist_name"
             app:layout_constraintVertical_bias="0.698" />
+
+        <Button
+            android:id="@+id/save_playlist_btn"
+            android:layout_width="73dp"
+            android:layout_height="46dp"
+            android:text="save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

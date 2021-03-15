@@ -5,7 +5,8 @@ import java.util.List;
 public class Playlist {
 
     private String playlistName;
-    List<Song> songs;
+    private String imagePath;
+    private List<Song> songs;
 
     public String getPlaylistName() {
         return playlistName;
@@ -17,6 +18,14 @@ public class Playlist {
 
     public void setSongs(List<Song> songs) {
         this.songs = songs;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public void setPlaylistName(String playlistName) {

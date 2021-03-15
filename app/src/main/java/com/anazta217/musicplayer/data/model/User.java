@@ -1,4 +1,4 @@
-package com.anazta217.musicplayer.model;
+package com.anazta217.musicplayer.data.model;
 
 import android.util.Patterns;
 

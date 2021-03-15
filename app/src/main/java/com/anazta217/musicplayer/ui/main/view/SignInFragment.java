@@ -1,4 +1,4 @@
-package com.anazta217.musicplayer;
+package com.anazta217.musicplayer.ui.main.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.anazta217.musicplayer.R;
+import com.anazta217.musicplayer.utils.Constants;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -27,7 +29,6 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
 
     private FirebaseAuth firebaseAuth;
     private GoogleSignInClient mGoogleSignInClient;
-    private static final int RC_SIGN_IN = 15;
     private EditText emailInput;
     private EditText passwordInput;
 
@@ -45,9 +46,12 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
         emailInput = inflate.findViewById(R.id.emailInput);
         passwordInput = inflate.findViewById(R.id.passwordInput);
 
-        inflate.findViewById(R.id.sign_in_button).setOnClickListener(this);
-        inflate.findViewById(R.id.sign_up_button).setOnClickListener(this);
-        inflate.findViewById(R.id.sign_in_firebase_button).setOnClickListener(this);
+        inflate.findViewById(R.id.sign_in_btn).setOnClickListener(this);
+        inflate.findViewById(R.id.sign_up_btn).setOnClickListener(this);
+        inflate.findViewById(R.id.sign_in_firebase_btn).setOnClickListener(this);
+        inflate.findViewById(R.id.forget_password_btn).setOnClickListener(this);
+
+       // TextView textView =
 
         return inflate;
     }
@@ -85,14 +89,14 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == RC_SIGN_IN) {
+        if (requestCode == Constants.GOOGLE_AUTH_REQUEST_CODE) {
            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
            handleSignInResult(task);
         }
     }
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
+        startActivityForResult(signInIntent, Constants.GOOGLE_AUTH_REQUEST_CODE);
     }
 
     public void updateUI(GoogleSignInAccount account){
@@ -106,15 +110,17 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.sign_in_button:
+            case R.id.sign_in_btn:
                 signIn();
                 break;
-            case R.id.sign_up_button:
+            case R.id.sign_up_btn:
                 ((MainActivity)getActivity()).openCreateUserFragment();
                 break;
-            case R.id.sign_in_firebase_button:
+            case R.id.sign_in_firebase_btn:
                 loginFirebase();
                 break;
+            case R.id.forget_password_btn:
+                ((MainActivity)getActivity()).createResetPasswordFragment();
         }
     }
 }

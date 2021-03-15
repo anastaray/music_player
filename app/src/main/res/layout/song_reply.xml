@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/imagePlaylistView"
+        android:layout_width="194dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <Button
+        android:id="@+id/play_song_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_play_arrow_black_24dp"
+        android:onClick="playBtnClick"
+        app:layout_constraintTop_toBottomOf="@+id/volumeBar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="190dp" />
+
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="183dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePlaylistView" />
+
+    <TextView
+        android:id="@+id/singer"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songName" />
+
+    <SeekBar
+        android:id="@+id/volumeBar"
+        android:layout_width="299dp"
+        android:layout_height="31dp"
+        android:max="100"
+        android:progress="50"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="510dp" />
+
+    <ImageView
+        android:id="@+id/next_song_btn"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="28dp"
+        android:src="@drawable/ic_skip_next_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/play_song_btn"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="560dp" />
+
+    <ImageView
+        android:id="@+id/previous_son_btn"
+        android:layout_width="31dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/ic_skip_previous_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/play_song_btn"
+        app:layout_constraintTop_toBottomOf="@+id/volumeBar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/remainingTimeLabel"
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:text="-1:49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/volumeBar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="510dp" />
+
+    <TextView
+        android:id="@+id/elapsedTimeLabel"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:text="0:11"
+        app:layout_constraintEnd_toStartOf="@+id/volumeBar"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="510dp" />
+
+    <ImageView
+        android:id="@+id/repeat_song_btn"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_repeat_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toEndOf="@+id/next_song_btn"
+        app:layout_constraintTop_toBottomOf="@+id/volumeBar"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/random_song_btn"
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="26dp"
+        android:src="@drawable/ic_shuffle_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/previous_son_btn"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="561dp" />
+
+    <ImageView
+        android:id="@+id/add_song_to_favorite_btn"
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:src="@drawable/ic_favorite_border_24px"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

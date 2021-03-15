@@ -4,21 +4,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.anazta217.musicplayer.ui.main.view.SignInFragment">
 
 
     <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/sign_in_btn"
+        android:layout_width="106dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="296dp"
         android:text="@string/signIn_btn"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/emailInput"
@@ -50,7 +51,7 @@
         app:layout_constraintVertical_bias="0.057" />
 
     <Button
-        android:id="@+id/sign_in_firebase_button"
+        android:id="@+id/sign_in_firebase_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/signIn_btn"
@@ -63,14 +64,14 @@
         app:strokeColor="@color/white" />
 
     <Button
+        android:id="@+id/forget_password_btn"
         android:layout_width="132dp"
         android:layout_height="31dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/forget_password_btn"
         android:textColor="@color/black"
         android:textSize="8sp"
-        android:onClick="ClickIfForgetPassword"
-        app:layout_constraintBottom_toTopOf="@+id/sign_in_firebase_button"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_firebase_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +80,9 @@
         app:strokeColor="@color/white" />
 
     <Button
-        android:id="@+id/sign_up_button"
+        android:id="@+id/sign_up_btn"
         android:layout_width="82dp"
         android:layout_height="30dp"
-        android:layout_marginTop="11dp"
         android:text="@string/signUp_btn"
         android:textColor="@color/black"
         android:textSize="8sp"
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_firebase_button"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_firebase_btn"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

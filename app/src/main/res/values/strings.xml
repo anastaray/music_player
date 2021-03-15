@@ -24,5 +24,17 @@
     <string name="reset_email">Reset email</string>
     <string name="reset_password_btn">Reset password</string>
     <string name="back_btn">Back</string>
+    <string name="add_image_intent_title">Choose image file</string>
+    <string name="add_audio_intent_title">Choose audio file</string>
+    <string name="empty_title_error_message">Enter title</string>
+
+    SONG SCREEN
+    <string name="add_image_song_btn"></string>
+    <string name="play_song_btn"></string>
+    <string name="stop_song_btn"></string>
+    <string name="next_song_btn"></string>
+    <string name="previous_song_btn"></string>
+    <string name="random_song_btn"></string>
+    <string name="add_song_to_favorite_btn"></string>
 
 </resources>
